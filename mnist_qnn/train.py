@@ -11,6 +11,11 @@ import collections
 import matplotlib.pyplot as plt
 from cirq.contrib.svg import SVGCircuit
 
+import sys
+
+orig_stdout = sys.stdout
+f = open("out.txt", "w")
+sys.stdout = f
 
 # DISCLAIMER
 # it runs on conda, but not on poetry
@@ -311,3 +316,6 @@ def start():
 
 
 start()
+
+sys.stdout = orig_stdout
+f.close()
