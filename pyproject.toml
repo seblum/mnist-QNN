@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "mnist_QNN"
+version = "0.1.0"
+description = ""
+authors = ["seblum <sebast.blum@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.8.8"
+grpcio = "1.30.0"
+tensorflow = "2.3.1"
+tensorflow-serving-api= "2.3.0"
+seaborn = "^0.11.1"
+numpy = "1.18"
+matplotlib = "^3.4.2"
+cirq = "0.11.0"
+tensorflow-quantum = "0.5.0"
+tqdm = "4.59.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+my-script = "mnist_qnn.train:start"
